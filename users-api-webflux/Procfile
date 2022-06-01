@@ -1,0 +1,2 @@
+release: ./mvnw -Dliquibase.changeLogFile=src/main/resources/db/changelog/changelog-master.xml -Dliquibase.url=$JDBC_DATABASE_URL -Dliquibase.promptOnNonLocalDatabase=false liquibase:update
+web: java -Dspring.profiles.active=default -Dserver.port=$PORT -jar target/*.jar
